@@ -1,0 +1,4 @@
+# Large source files (keep local, don't push to GitHub)
+01_数据与资料/历史文献/*.pdf
+01_数据与资料/历史文献/all_poems_raw.txt
+01_数据与资料/历史文献/周勋初_李白评传.md
