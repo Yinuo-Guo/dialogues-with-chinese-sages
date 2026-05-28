@@ -12,7 +12,7 @@
 
 <p align="center">
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License: MIT"></a>
-  <a href="#路线图--roadmap"><img src="https://img.shields.io/badge/sages-Li%20Bai%20✅%20|%20Confucius%20🚧-green" alt="Sages"></a>
+  <a href="#路线图--roadmap"><img src="https://img.shields.io/badge/sages-Li%20Bai%20✅%20|%20Confucius%20📋-green" alt="Sages"></a>
 </p>
 
 ---
@@ -133,7 +133,7 @@ We pick sages with global name recognition and ideas that speak directly to mode
 |---|---|---|
 | 李白 / Li Bai | 唐 | ✅ 诗仙 — 浪漫主义的终极代言人 / The ultimate Romantic, face of Chinese poetry worldwide |
 | 老子 / Laozi | 春秋 | 📋 《道德经》全球销量仅次于《圣经》 — 81章，完美适配 AI 短对话 / Tao Te Ching: the world's most translated book after the Bible. 81 chapters of crisp, AI-friendly dialogue material |
-| 孔子 / Confucius | 春秋 | 🚧 全世界最著名的中国人 — 《论语》通篇对话体，天生就该是 AI / The most famous Chinese person on earth. The Analects is literally a dialogue—made for AI |
+| 孔子 / Confucius | 春秋 | 📋 全世界最著名的中国人 — 《论语》通篇对话体，天生就该是 AI / The most famous Chinese person on earth. The Analects is literally a dialogue—made for AI |
 | 杜甫 / Du Fu | 唐 | 📋 诗圣 — 李白是天上来的，杜甫是人间的 / Shakespeare + Virgil of China. Li Bai fell from heaven; Du Fu rose from the earth |
 | 苏轼 / Su Shi | 宋 | 📋 千古第一全才 — 写诗做饭搞水利都会，跟他聊天肯定不无聊 / Poet, painter, cook, engineer, and the wittiest drinking buddy you'll ever have |
 | 庄子 / Zhuangzi | 战国 | 📋 做梦变蝴蝶那位 — 西方存在主义哲学家最爱引用的中国思想家 / The butterfly-dreamer. Camus and Borges were fans |
