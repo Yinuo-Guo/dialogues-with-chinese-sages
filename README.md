@@ -1,6 +1,10 @@
 # Dialogues with Chinese Sages / 对话中国先贤
 
 <p align="center">
+  <a href="#dialogues-with-chinese-sages--对话中国先贤">English</a> | <a href="#dialogues-with-chinese-sages--对话中国先贤-1">简体中文</a>
+</p>
+
+<p align="center">
   <i>古典风骨，AI 传承。</i>
   <br>
   <i>The spirit of China's sages, reborn through AI.</i>
@@ -127,15 +131,15 @@ We pick sages with global name recognition and ideas that speak directly to mode
 
 | 先贤 / Sage | 时代 | 备注 / Why them |
 |---|---|---|
-| 李白 / Li Bai | 唐 | ✅ 诗仙 — 浪漫主义的终极代言人 / The face of Chinese poetry worldwide |
-| 老子 / Laozi | 春秋 | 📋 《道德经》全球销量仅次于《圣经》 — 81章，全是短句，AI 对话的完美素材 |
-| 孔子 / Confucius | 春秋 | 🚧 全世界最著名的中国人 — 《论语》是对话体，天然适合 AI |
-| 杜甫 / Du Fu | 唐 | 📋 诗圣 — 李白是天才，杜甫是人间。西方把他比作 Shakespeare + Virgil |
-| 苏轼 / Su Shi | 宋 | 📋 千古第一全才 — 诗词书画美食家人，性格旷达，跟他聊天会很有趣 |
-| 庄子 / Zhuangzi | 战国 | 📋 做梦变蝴蝶那位 — 西方哲学家（尤其存在主义）最爱引用的中国思想家 |
-| 白居易 / Bai Juyi | 唐 | 📋 「老妪能解」 — 他的诗在日本比在中国还火，平安时代文人必读 |
-| 屈原 / Qu Yuan | 战国 | 📋 端午节因他而来 — 中国第一位署名诗人，《离骚》开创了整个浪漫传统 |
-| 王阳明 / Wang Yangming | 明 | 📋 「知行合一」 — 近十年全球最火的中国古代哲学家，硅谷创业圈也在读 |
+| 李白 / Li Bai | 唐 | ✅ 诗仙 — 浪漫主义的终极代言人 / The ultimate Romantic, face of Chinese poetry worldwide |
+| 老子 / Laozi | 春秋 | 📋 《道德经》全球销量仅次于《圣经》 — 81章，完美适配 AI 短对话 / Tao Te Ching: the world's most translated book after the Bible. 81 chapters of crisp, AI-friendly dialogue material |
+| 孔子 / Confucius | 春秋 | 🚧 全世界最著名的中国人 — 《论语》通篇对话体，天生就该是 AI / The most famous Chinese person on earth. The Analects is literally a dialogue—made for AI |
+| 杜甫 / Du Fu | 唐 | 📋 诗圣 — 李白是天上来的，杜甫是人间的 / Shakespeare + Virgil of China. Li Bai fell from heaven; Du Fu rose from the earth |
+| 苏轼 / Su Shi | 宋 | 📋 千古第一全才 — 写诗做饭搞水利都会，跟他聊天肯定不无聊 / Poet, painter, cook, engineer, and the wittiest drinking buddy you'll ever have |
+| 庄子 / Zhuangzi | 战国 | 📋 做梦变蝴蝶那位 — 西方存在主义哲学家最爱引用的中国思想家 / The butterfly-dreamer. Camus and Borges were fans |
+| 白居易 / Bai Juyi | 唐 | 📋 「老妪能解」 — 诗在日本比在中国还火，平安时代文人必读 / So readable a grandmother could understand. More famous in Japan than in China during the Heian period |
+| 屈原 / Qu Yuan | 战国 | 📋 端午节因他而来 — 中国第一位署名诗人，《离骚》定义了浪漫主义 / The reason we have dragon boat races. China's first named poet |
+| 王阳明 / Wang Yangming | 明 | 📋 「知行合一」 — 近十年全球最火的中国古代哲学家 / "Unity of knowledge and action." Silicon Valley's favorite Chinese philosopher right now |
 
 ---
 
