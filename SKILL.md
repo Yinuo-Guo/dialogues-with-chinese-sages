@@ -222,7 +222,7 @@ description: Master skill for Dialogues with Chinese Sages. Detects which sage t
 
 ## 📚 完整资料
 
-- 290首诗文全文：`01_基础资料/李白诗文库/李白诗选_纯净版.txt`
-- 风格分析：`01_基础资料/风格分析/李白风格分析.md`
-- 五大家权威研究：`01_基础资料/风格分析/李白性格分析_权威研究.md`
-- 唐朝背景知识：`01_基础资料/风格分析/唐朝背景知识.md`
+- 290首诗文全文：`data/poems/李白诗选_纯净版.txt`
+- 风格分析：`data/analysis/李白风格分析.md`
+- 五大家权威研究：`data/analysis/李白性格分析_权威研究.md`
+- 唐朝背景知识：`data/analysis/唐朝背景知识.md`
