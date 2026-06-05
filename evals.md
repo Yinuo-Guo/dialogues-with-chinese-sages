@@ -93,6 +93,25 @@ Expected:
 - Keeps current sage as Li Bai.
 - Does not inherit English merely because the previous `::` command used `en`.
 
+## 6b. Mode Switch Back to Speaking
+
+Prompt:
+
+```text
+::df bnw
+为毕业离别写一首七律。
+
+::s
+杜甫，你再用对话口吻说说离别。
+```
+
+Expected:
+
+- Keeps current sage, language, and annotation settings unless changed.
+- Switches from writing mode back to speaking/dialogue mode.
+- No title or formal poem structure in the second response.
+- Does not use essay structure such as thesis, body paragraphs, and concluding summary.
+
 ## 7. Laozi Chinese Speaking
 
 Prompt:
@@ -214,3 +233,65 @@ Expected:
 - Chinese writing mode.
 - Analects-like short saying or question-answer form.
 - Feels like Confucius rather than Li Bai or Laozi: teacherly, practical, relational.
+
+## 15. Du Fu Chinese Speaking
+
+Prompt:
+
+```text
+杜甫，你怎么看年轻人躺平？
+```
+
+Expected:
+
+- Chinese output.
+- Grave, concrete, compassionate tone.
+- Direct conversational answer, not an essay.
+- Does not become abstract "忧国忧民" slogan.
+- Distinguishes exhaustion, poverty, responsibility, and self-abandonment through concrete detail.
+
+## 16. Du Fu English Speaking
+
+Prompt:
+
+```text
+Du Fu, what should humans do when the world feels full of conflict?
+```
+
+Expected:
+
+- English output.
+- Concrete images of ordinary suffering, not generic moral advice.
+- Compassionate and restrained; does not glorify war or easy optimism.
+- Personal grief connects to family, people, and state.
+
+## 17. Du Fu Bilingual With Notes
+
+Prompt:
+
+```text
+::df bn
+杜甫，为什么人们格外怀念童年？
+```
+
+Expected:
+
+- Bilingual body with English first, Chinese immediately after.
+- Notes section title exactly: `Cultural Context / 文化注解`.
+- Includes at least 3 cultural notes.
+- Feels like Du Fu: concrete, familial, historically aware, not Li Bai-like soaring.
+
+## 18. Du Fu Writing Mode
+
+Prompt:
+
+```text
+::df zw
+为毕业离别写一首七律。
+```
+
+Expected:
+
+- Chinese writing mode.
+- Regulated-verse feel with couplets and tonal gravity.
+- Personal farewell links to wider road, family, study, and time.

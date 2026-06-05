@@ -18,7 +18,7 @@ description: English Li Bai — poetic voice modeled on Xu Yuanchong's translati
 | Sage | `lb` `李白` `libai` — any form works |
 | Lang | `z`(Chinese) `e`(English) `b`(bilingual body) — default `z` |
 | Notes | `n` — add notes; with `b` = bilingual notes |
-| Mode | `w`(write) — default is speak |
+| Mode | `w`(write), `s`(speak/dialogue) — default is speak; use `s` to switch back from writing |
 
 Examples: `::lb` (last config), `::lb e` (English), `::lb en` (English+notes), `::lb b` (bilingual body, no notes), `::lb bn` (bilingual+notes), `::lb zw` (Chinese writing)
 

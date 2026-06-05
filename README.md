@@ -10,7 +10,7 @@
 
 <p align="center">
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License: MIT"></a>
-  <a href="#roadmap"><img src="https://img.shields.io/badge/sages-Li%20Bai%20✅%20|%20Laozi%20✅%20|%20Confucius%20✅-green" alt="Sages"></a>
+  <a href="#roadmap"><img src="https://img.shields.io/badge/sages-Li%20Bai%20✅%20|%20Laozi%20✅%20|%20Confucius%20✅%20|%20Du%20Fu%20✅-green" alt="Sages"></a>
 </p>
 
 ---
@@ -59,6 +59,16 @@ What went into Confucius:
 | Guardrails | Confucius is human, not a lifeless icon; ritual must carry benevolence |
 | Dual-Mode Skill | 🗣️ Speaking (teacherly dialogue) + ✍️ Writing (Analects-style sayings and short essays) |
 
+What went into Du Fu:
+
+| Step | Detail |
+|---|---|
+| Biography | William Hung's *Tu Fu: China's Greatest Poet* |
+| Translation | Xu Yuanchong's Chinese-English selected Du Fu poems |
+| Personality | Fivefold model: care, benevolence, history, craft, plain depth |
+| Guardrails | Du Fu is not just sadness; "care for the people" must become concrete detail |
+| Dual-Mode Skill | 🗣️ Speaking (grave, concrete counsel) + ✍️ Writing (regulated verse / narrative poems) |
+
 ## Demo
 
 **Chinese · Speak**：
@@ -89,7 +99,7 @@ What went into Confucius:
 
 | | File | Audience | Style |
 |---|---|---|---|
-| 🏮 | `SKILL.md` | All users | Master router for Li Bai, Laozi, and Confucius |
+| 🏮 | `SKILL.md` | All users | Master router for Li Bai, Laozi, Confucius, and Du Fu |
 | 🌍 | `SKILL_EN.md` | Global English | Li Bai companion variant in poetic English |
 | 📖 | `SKILL_BILINGUAL.md` | Cross-cultural | Li Bai companion variant with English / Chinese body + bilingual context |
 
@@ -97,7 +107,7 @@ What went into Confucius:
 
 ## Quick Start
 
-Format: `::sage [lang] [notes] [mode]`. Omit anything you're not changing. `::lb` / `::libai` / `::Li Bai` / `::李白` all work for Li Bai. `::lz` / `::laozi` / `::Laozi` / `::老子` all work for Laozi. `::kz` / `::confucius` / `::Confucius` / `::孔子` all work for Confucius.
+Format: `::sage [lang] [notes] [mode]`. Omit anything you're not changing. `::lb` / `::libai` / `::Li Bai` / `::李白` all work for Li Bai. `::lz` / `::laozi` / `::Laozi` / `::老子` all work for Laozi. `::kz` / `::confucius` / `::Confucius` / `::孔子` all work for Confucius. `::df` / `::dufu` / `::Du Fu` / `::杜甫` all work for Du Fu.
 
 | Flag | Meaning |
 |---|---|
@@ -106,9 +116,10 @@ Format: `::sage [lang] [notes] [mode]`. Omit anything you're not changing. `::lb
 | `b` | Bilingual body + bilingual context |
 | `n` | Annotated |
 | `w` | Writing mode |
+| `s` | Speaking/dialogue mode |
 | none | Speaking mode (default) |
 
-Start with `::lb`, then stack flags freely: `::e` for English, `::w` to write, `::bn` for bilingual with context. No `::` needed either—natural language auto-detects.
+Start with `::lb`, then stack flags freely: `::e` for English, `::w` to write, `::s` to switch back to dialogue, `::bn` for bilingual with context. No `::` needed either—natural language auto-detects.
 
 ## Installation
 
@@ -131,7 +142,7 @@ We pick sages with global name recognition and ideas that speak directly to mode
 | Li Bai | Tang | ✅ The ultimate Romantic, face of Chinese poetry worldwide |
 | Laozi | Spring & Autumn | ✅ *Tao Te Ching*: 81 chapters of spare paradox, political restraint, and soft power |
 | Confucius | Spring & Autumn | ✅ The most famous Chinese sage; *The Analects* is literally a dialogue—made for AI |
-| Du Fu | Tang | 📋 Shakespeare + Virgil of China. Li Bai fell from heaven; Du Fu rose from the earth |
+| Du Fu | Tang | ✅ China's poet-historian: suffering, craft, and compassion under one roof |
 | Su Shi | Song | 📋 Poet, painter, cook, engineer, and the wittiest drinking buddy you'll ever have |
 | Zhuangzi | Warring States | 📋 The butterfly-dreamer. Camus and Borges were fans |
 | Bai Juyi | Tang | 📋 So readable a grandmother could understand. More famous in Japan than in China during the Heian period |
