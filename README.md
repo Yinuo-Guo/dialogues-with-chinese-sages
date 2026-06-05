@@ -18,6 +18,10 @@
 
 ## What This Is
 
+Chinese culture has never lacked beauty, wisdom, or emotional force. What it often lacks, especially for global readers, is a living point of entry. A poem can be translated word by word and still lose the moonlight; a classic can be explained accurately and still feel far away.
+
+This project tries to make that distance smaller. It uses AI as a new cultural bridge: not to flatten Chinese tradition into slogans, but to let more people meet its voices in conversation, curiosity, disagreement, comfort, and play. If Li Bai, Laozi, Confucius, Du Fu, and Su Shi can answer modern questions with their own temperaments intact, Chinese culture becomes not only something to study, but something one can speak with.
+
 This repository contains an Agent Skill that lets AI respond as major Chinese sages and writers: not as a generic explainer, but with distinct voice, worldview, historical context, and writing habits.
 
 It is designed for three use cases:
@@ -26,7 +30,7 @@ It is designed for three use cases:
 - **Writing**: generate poems, short chapters, sayings, essays, letters, ci, fu, and other form-aware pieces.
 - **Cultural annotation**: request bilingual output and notes that explain allusions, texts, historical settings, and style choices.
 
-The project is not trying to "translate ancient China into modern slogans." Each sage has guardrails, source notes, and a personality model so the output stays recognizably different from the others.
+The project is not trying to "translate ancient China into modern slogans." It is a small attempt to carry classical Chinese thought and literature into new interfaces with dignity, warmth, and precision. Each sage has guardrails, source notes, and a personality model so the output stays recognizably different from the others.
 
 ## Supported Sages
 
