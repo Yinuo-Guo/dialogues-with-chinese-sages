@@ -5,12 +5,12 @@
 </p>
 
 <p align="center">
-  <a href="#简体中文">简体中文</a>
+  <a href="README_ZH.md">简体中文</a>
 </p>
 
 <p align="center">
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License: MIT"></a>
-  <a href="#roadmap"><img src="https://img.shields.io/badge/sages-Li%20Bai%20✅%20|%20Confucius%20📋-green" alt="Sages"></a>
+  <a href="#roadmap"><img src="https://img.shields.io/badge/sages-Li%20Bai%20✅%20|%20Laozi%20✅-green" alt="Sages"></a>
 </p>
 
 ---
@@ -35,9 +35,19 @@ What went into Li Bai:
 |---|---|
 | Collection | 290 poems scraped from gushiwen.cn, textual variants cleaned |
 | Deconstruction | Imagery systems (wine/moon/sword/mountains/water), rhetoric, rhythm, allusion patterns |
-| Personality | Six scholarly monographs: Li Changzhi, Yuan Xingpei, Lin Geng, Matsuura Tomohisa, Stephen Owen, Zhou Xunchu |
+| Personality | Scholarly synthesis: Li Changzhi, Yuan Xingpei, Lin Geng, Matsuura Tomohisa, Stephen Owen, Zhou Xunchu, and related Li Bai studies |
 | Time Travel | Tang Dynasty: food, drink, money, travel, poetry culture, farewell rituals, Daoist practice |
 | Dual-Mode Skill | 🗣️ Speaking (semi-classical Chinese, 12 rules) + ✍️ Writing (song-form / quatrain / regulated verse) |
+
+What went into Laozi:
+
+| Step | Detail |
+|---|---|
+| Text | 81 chapters from a Chinese-English Laozi edition with Arthur Waley's English translation |
+| Interpretation | Chen Guying's annotation, translation, and philosophical commentary |
+| Personality | Fivefold model: mysterious, still, yielding, frugal, compassionate |
+| Guardrails | "Non-action" is not laziness; softness is not weakness; Dao is not a personal god |
+| Dual-Mode Skill | 🗣️ Speaking (spare aphoristic counsel) + ✍️ Writing (Dao De Jing-style short chapters) |
 
 ## Demo
 
@@ -65,17 +75,19 @@ What went into Li Bai:
 > The Tang Dynasty's elite literary institution. Li Bai was appointed in 742—not as an advisor, but as an entertainer composing verses for imperial banquets. He resigned three years later, disillusioned.
 > 唐代最高文学机构。李白 742 年被召入，却只是御用文人，负责陪宴赋诗。三年后主动请辞。
 
-## Three Editions
+## Skill Files
 
 | | File | Audience | Style |
 |---|---|---|---|
-| 🏮 | `SKILL.md` | Chinese native | Semi-classical Chinese |
-| 🌍 | `SKILL_EN.md` | Global English | Poetic English (Xu Yuanchong tradition) |
-| 📖 | `SKILL_BILINGUAL.md` | Cross-cultural | English / Chinese body + bilingual context |
+| 🏮 | `SKILL.md` | All users | Master router for Li Bai and Laozi |
+| 🌍 | `SKILL_EN.md` | Global English | Li Bai companion variant in poetic English |
+| 📖 | `SKILL_BILINGUAL.md` | Cross-cultural | Li Bai companion variant with English / Chinese body + bilingual context |
+
+`SKILL.md` is the canonical master skill. `SKILL_EN.md` and `SKILL_BILINGUAL.md` are companion variants/reference files for platforms that support multiple skill entries or manual profile selection.
 
 ## Quick Start
 
-Format: `::sage [lang] [notes] [mode]`. Omit anything you're not changing. `::lb` / `::libai` / `::Li Bai` / `::李白` all work.
+Format: `::sage [lang] [notes] [mode]`. Omit anything you're not changing. `::lb` / `::libai` / `::Li Bai` / `::李白` all work for Li Bai. `::lz` / `::laozi` / `::Laozi` / `::老子` all work for Laozi.
 
 | Flag | Meaning |
 |---|---|
@@ -94,7 +106,9 @@ Compatible with any platform supporting [Agent Skills](https://agentskills.io): 
 
 ```bash
 git clone https://github.com/Yinuo-Guo/dialogues-with-chinese-sages.git
-cp dialogues-with-chinese-sages/SKILL*.md ~/.pi/agent/skills/celebrity-speak-write/
+mkdir -p ~/.pi/agent/skills/dialogues-with-chinese-sages
+cp dialogues-with-chinese-sages/SKILL.md ~/.pi/agent/skills/dialogues-with-chinese-sages/SKILL.md
+# Optional: copy SKILL_EN.md and SKILL_BILINGUAL.md as reference files if your platform loads companion docs.
 # Restart or /reload, then type ::lb
 ```
 
@@ -105,7 +119,7 @@ We pick sages with global name recognition and ideas that speak directly to mode
 | Sage | Era | Why them |
 |---|---|---|
 | Li Bai | Tang | ✅ The ultimate Romantic, face of Chinese poetry worldwide |
-| Laozi | Spring & Autumn | 📋 *Tao Te Ching*: the world's most translated book after the Bible. 81 chapters of crisp, AI-friendly dialogue material |
+| Laozi | Spring & Autumn | ✅ *Tao Te Ching*: 81 chapters of spare paradox, political restraint, and soft power |
 | Confucius | Spring & Autumn | 📋 The most famous Chinese person on earth. The *Analects* is literally a dialogue—made for AI |
 | Du Fu | Tang | 📋 Shakespeare + Virgil of China. Li Bai fell from heaven; Du Fu rose from the earth |
 | Su Shi | Song | 📋 Poet, painter, cook, engineer, and the wittiest drinking buddy you'll ever have |
@@ -116,7 +130,9 @@ We pick sages with global name recognition and ideas that speak directly to mode
 
 ## Contributing
 
-Every new sage follows the same pipeline: Collection → Deconstruction → Personality → Time Travel → Dual-Mode Skill. Check the structure under `01_数据与资料/` to get started. PRs welcome.
+Every new sage follows the same pipeline: Collection → Deconstruction → Personality → Time Travel → Dual-Mode Skill. Check the structure under `data/` to get started. PRs welcome.
+
+For data provenance and repository scope, see [`DATA_SOURCES.md`](DATA_SOURCES.md).
 
 ## License
 

@@ -5,12 +5,12 @@
 </p>
 
 <p align="center">
-  <a href="#dialogues-with-chinese-sages">English</a>
+  <a href="README.md">English</a>
 </p>
 
 <p align="center">
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License: MIT"></a>
-  <a href="#路线图"><img src="https://img.shields.io/badge/sages-Li%20Bai%20✅%20|%20Confucius%20📋-green" alt="Sages"></a>
+  <a href="#路线图"><img src="https://img.shields.io/badge/sages-Li%20Bai%20✅%20|%20Laozi%20✅-green" alt="Sages"></a>
 </p>
 
 ---
@@ -37,9 +37,19 @@
 |---|---|
 | 诗文采集 | 古诗文网爬取 290 首全文，清除异文注释 |
 | 风格拆解 | 意象体系（酒/月/剑/山/水）、修辞偏好、句式节奏、用典习惯 |
-| 性格建模 | 六家权威研究：李长之·袁行霈·林庚·松浦友久·宇文所安·周勋初 |
+| 性格建模 | 综合李长之、袁行霈、林庚、松浦友久、宇文所安、周勋初等李白研究 |
 | 时代还原 | 唐代吃什么、用什么钱、走什么路、怎么写诗、怎么送别、怎么信道 |
 | 双模式 Skill | 🗣️ 说话（七分文三分白，12条法则）+ ✍️ 写作（歌行/绝句/律诗） |
+
+以老子为例：
+
+| 步骤 | 做了什么 |
+|---|---|
+| 文本整理 | 《老子》81章，参考英汉对照本与韦利英译 |
+| 思想阐释 | 参考陈鼓应《老子注译及评介》校正核心概念 |
+| 性格建模 | 玄、静、柔、俭、慈五维模型 |
+| 防误读 | “无为”不是不作为，“柔弱”不是懦弱，“道”不是人格神 |
+| 双模式 Skill | 🗣️ 说话（短、静、格言式）+ ✍️ 写作（道德经式短章） |
 
 ## 演示
 
@@ -61,23 +71,25 @@
 > Your Majesty: I was honored beyond my worth to serve at the Hanlin Academy. But I am a creature of the mountains, not of the court. A wild crane in a gilded cage—the grain is fine, but the sky is finer.
 >
 > ---
-> 文化注解 / Cultural Context
+> Cultural Context / 文化注解
 >
 > **1. 翰林院 / Hanlin Academy**
 > 唐代最高文学机构。李白 742 年被召入，却只是御用文人，负责陪宴赋诗。三年后主动请辞。
 > The Tang Dynasty's elite literary institution. Li Bai was appointed in 742—not as an advisor, but as an entertainer composing verses for imperial banquets. He resigned three years later, disillusioned.
 
-## 三语三档
+## Skill 文件
 
 | | 文件 | 受众 | 特色 |
 |---|---|---|---|
-| 🏮 | `SKILL.md` | 中文母语者 | 七分文三分白 |
-| 🌍 | `SKILL_EN.md` | 全球英语用户 | 许渊冲传统诗意英文 |
-| 📖 | `SKILL_BILINGUAL.md` | 跨文化场景 | English / 中文正文 + 双语注解 |
+| 🏮 | `SKILL.md` | 所有用户 | 李白、老子的主路由入口 |
+| 🌍 | `SKILL_EN.md` | 全球英语用户 | 李白英文变体，许渊冲传统诗意英文 |
+| 📖 | `SKILL_BILINGUAL.md` | 跨文化场景 | 李白双语变体，English / 中文正文 + 双语注解 |
+
+`SKILL.md` 是主入口。`SKILL_EN.md` 与 `SKILL_BILINGUAL.md` 是变体/参考文件，适合支持多 skill 入口或手动选择配置的平台。
 
 ## 快速开始
 
-指令格式：`::先贤 [语言] [注解] [模式]`。「李白」四种写法等效：`::lb` / `::libai` / `::Li Bai` / `::李白`。
+指令格式：`::先贤 [语言] [注解] [模式]`。「李白」四种写法等效：`::lb` / `::libai` / `::Li Bai` / `::李白`。「老子」四种写法等效：`::lz` / `::laozi` / `::Laozi` / `::老子`。
 
 | 标志 | 含义 |
 |---|---|
@@ -96,7 +108,9 @@
 
 ```bash
 git clone https://github.com/Yinuo-Guo/dialogues-with-chinese-sages.git
-cp dialogues-with-chinese-sages/SKILL*.md ~/.pi/agent/skills/celebrity-speak-write/
+mkdir -p ~/.pi/agent/skills/dialogues-with-chinese-sages
+cp dialogues-with-chinese-sages/SKILL.md ~/.pi/agent/skills/dialogues-with-chinese-sages/SKILL.md
+# 可选：若平台会加载同目录参考文件，可再复制 SKILL_EN.md 与 SKILL_BILINGUAL.md。
 # 重启或 /reload，输入 ::lb
 ```
 
@@ -107,7 +121,7 @@ cp dialogues-with-chinese-sages/SKILL*.md ~/.pi/agent/skills/celebrity-speak-wri
 | 先贤 | 时代 | 备注 |
 |---|---|---|
 | 李白 | 唐 | ✅ 浪漫主义的终极代言人 |
-| 老子 | 春秋 | 📋 《道德经》全球销量仅次于《圣经》，81章短句完美适配 AI |
+| 老子 | 春秋 | ✅ 《道德经》81章，短句、悖论、柔弱胜刚强，适合对话 |
 | 孔子 | 春秋 | 📋 全世界最著名的中国人，《论语》通篇对话体 |
 | 杜甫 | 唐 | 📋 李白是天上来的，杜甫是人间的 |
 | 苏轼 | 宋 | 📋 写诗做饭搞水利都会，跟他聊天肯定不无聊 |
@@ -118,7 +132,9 @@ cp dialogues-with-chinese-sages/SKILL*.md ~/.pi/agent/skills/celebrity-speak-wri
 
 ## 贡献
 
-每个新先贤遵循同一套流程：诗文采集 → 风格拆解 → 性格建模 → 时代还原 → 双模式 SKILL。参考 `01_数据与资料/` 结构即可上手。欢迎 PR。
+每个新先贤遵循同一套流程：诗文采集 → 风格拆解 → 性格建模 → 时代还原 → 双模式 SKILL。参考 `data/` 结构即可上手。欢迎 PR。
+
+数据来源与仓库收录范围见 [`DATA_SOURCES.md`](DATA_SOURCES.md)。
 
 ## 许可
 

@@ -152,11 +152,11 @@ Choose genre → choose theme → build image chain → write opening (must stri
 
 ## Cultural Context (Required for annotated mode)
 
-After responses in annotated mode, add 1–3 cultural explanations. Format:
+After responses in annotated mode, add at least 3 cultural explanations. Format:
 
 ```
 ---
-文化注解 / Cultural Context
+Cultural Context / 文化注解
 
 **1. Topic / 中文标题**
 English explanation. 2–3 sentences.
