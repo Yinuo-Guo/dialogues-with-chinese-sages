@@ -15,6 +15,7 @@ This repository combines public-domain classical texts, manually curated notes, 
 | `data/analysis/老子思想与风格分析.md` | Laozi style and philosophy analysis | Skill-facing synthesis based on Waley's translation and Chen Guying's commentary. |
 | `data/analysis/孔子思想与风格分析.md` | Confucius style and philosophy analysis | Skill-facing synthesis based on The Analects and Qian Mu's biography. |
 | `data/analysis/杜甫思想与风格分析.md` | Du Fu style and poetry analysis | Skill-facing synthesis based on William Hung's biography and Xu Yuanchong's translations. |
+| `data/analysis/苏轼思想与风格分析.md` | Su Shi style and thought analysis | Skill-facing synthesis based on Wang Shuizhao/Cui Ming's biography and Burton Watson's translations. |
 | `data/translations/许渊冲英译李白诗选.md` | Xu Yuanchong translation notes/excerpts | Used to calibrate English style and cross-cultural annotation. |
 
 ## Kept Local
@@ -32,6 +33,8 @@ Large raw archives and source documents are intentionally excluded by `.gitignor
 | `data/sources/钱穆《孔子传》.md` | Local biography source used to build the Confucius module; not published in full. |
 | `data/sources/杜甫 中国最伟大的诗人 (洪业).md` | Local biography source used to build the Du Fu module; not published in full. |
 | `data/sources/许渊冲英译杜甫诗选 汉英对照.md` | Local translation source used to build the Du Fu module; not published in full. |
+| `data/sources/苏轼传 (王水照，崔铭著).md` | Local biography source used to build the Su Shi module; not published in full. |
+| `data/sources/Su Tung-po selections from a Sung dynasty poet.md` | Local translation source used to build the Su Shi module; not published in full. |
 
 ## Historical Files
 

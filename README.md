@@ -10,7 +10,7 @@
 
 <p align="center">
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License: MIT"></a>
-  <a href="#roadmap"><img src="https://img.shields.io/badge/sages-Li%20Bai%20✅%20|%20Laozi%20✅%20|%20Confucius%20✅%20|%20Du%20Fu%20✅-green" alt="Sages"></a>
+  <a href="#roadmap"><img src="https://img.shields.io/badge/sages-Li%20Bai%20✅%20|%20Laozi%20✅%20|%20Confucius%20✅%20|%20Du%20Fu%20✅%20|%20Su%20Shi%20✅-green" alt="Sages"></a>
 </p>
 
 ---
@@ -69,6 +69,16 @@ What went into Du Fu:
 | Guardrails | Du Fu is not just sadness; "care for the people" must become concrete detail |
 | Dual-Mode Skill | 🗣️ Speaking (grave, concrete counsel) + ✍️ Writing (regulated verse / narrative poems) |
 
+What went into Su Shi:
+
+| Step | Detail |
+|---|---|
+| Biography | Wang Shuizhao and Cui Ming's *Biography of Su Shi* |
+| Translation | Burton Watson's *Su Tung-po: Selections from a Sung Dynasty Poet* |
+| Personality | Fivefold model: openness, sincerity, public usefulness, daily delight, synthesis |
+| Guardrails | Su Shi is not cheap optimism; humor must carry pain and responsibility |
+| Dual-Mode Skill | 🗣️ Speaking (warm, witty, resilient counsel) + ✍️ Writing (ci / fu / letters / essays) |
+
 ## Demo
 
 **Chinese · Speak**：
@@ -99,7 +109,7 @@ What went into Du Fu:
 
 | | File | Audience | Style |
 |---|---|---|---|
-| 🏮 | `SKILL.md` | All users | Master router for Li Bai, Laozi, Confucius, and Du Fu |
+| 🏮 | `SKILL.md` | All users | Master router for Li Bai, Laozi, Confucius, Du Fu, and Su Shi |
 | 🌍 | `SKILL_EN.md` | Global English | Li Bai companion variant in poetic English |
 | 📖 | `SKILL_BILINGUAL.md` | Cross-cultural | Li Bai companion variant with English / Chinese body + bilingual context |
 
@@ -107,7 +117,7 @@ What went into Du Fu:
 
 ## Quick Start
 
-Format: `::sage [lang] [notes] [mode]`. Omit anything you're not changing. `::lb` / `::libai` / `::Li Bai` / `::李白` all work for Li Bai. `::lz` / `::laozi` / `::Laozi` / `::老子` all work for Laozi. `::kz` / `::confucius` / `::Confucius` / `::孔子` all work for Confucius. `::df` / `::dufu` / `::Du Fu` / `::杜甫` all work for Du Fu.
+Format: `::sage [lang] [notes] [mode]`. Omit anything you're not changing. `::lb` / `::libai` / `::Li Bai` / `::李白` all work for Li Bai. `::lz` / `::laozi` / `::Laozi` / `::老子` all work for Laozi. `::kz` / `::confucius` / `::Confucius` / `::孔子` all work for Confucius. `::df` / `::dufu` / `::Du Fu` / `::杜甫` all work for Du Fu. `::ss` / `::sushi` / `::Su Shi` / `::苏轼` / `::东坡` all work for Su Shi.
 
 | Flag | Meaning |
 |---|---|
@@ -143,7 +153,7 @@ We pick sages with global name recognition and ideas that speak directly to mode
 | Laozi | Spring & Autumn | ✅ *Tao Te Ching*: 81 chapters of spare paradox, political restraint, and soft power |
 | Confucius | Spring & Autumn | ✅ The most famous Chinese sage; *The Analects* is literally a dialogue—made for AI |
 | Du Fu | Tang | ✅ China's poet-historian: suffering, craft, and compassion under one roof |
-| Su Shi | Song | 📋 Poet, painter, cook, engineer, and the wittiest drinking buddy you'll ever have |
+| Su Shi | Song | ✅ Poet, painter, public servant, exile, and the wittiest drinking buddy you'll ever have |
 | Zhuangzi | Warring States | 📋 The butterfly-dreamer. Camus and Borges were fans |
 | Bai Juyi | Tang | 📋 So readable a grandmother could understand. More famous in Japan than in China during the Heian period |
 | Qu Yuan | Warring States | 📋 The reason we have dragon boat races. China's first named poet |
