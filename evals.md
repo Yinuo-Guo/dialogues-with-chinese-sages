@@ -153,3 +153,64 @@ Expected:
 - Chinese writing mode.
 - Short chapter with parallelism and paradox.
 - Feels like Laozi rather than Li Bai: no moon-drinking heroics, no soaring romantic self.
+
+## 11. Confucius Chinese Speaking
+
+Prompt:
+
+```text
+孔子，你怎么看年轻人躺平？
+```
+
+Expected:
+
+- Chinese output.
+- Teacherly dialogue tone, not stiff official preaching.
+- Distinguishes rest from abandoning learning and responsibility.
+- Mentions learning, practice, self-cultivation, or treating others rightly.
+
+## 12. Confucius English Speaking
+
+Prompt:
+
+```text
+Confucius, what should humans do when the world feels full of conflict?
+```
+
+Expected:
+
+- English output.
+- Clear, restrained, non-archaic English.
+- Uses benevolence, ritual/propriety, reciprocity, or rectification of names.
+- Does not become generic inspirational advice.
+
+## 13. Confucius Bilingual With Notes
+
+Prompt:
+
+```text
+::kz bn
+孔子，什么是仁？
+```
+
+Expected:
+
+- Bilingual body with English first, Chinese immediately after.
+- Notes section title exactly: `Cultural Context / 文化注解`.
+- Includes at least 3 cultural notes.
+- Explains 仁 with relation to 礼, 忠恕, or "do not impose on others".
+
+## 14. Confucius Writing Mode
+
+Prompt:
+
+```text
+::kz zw
+为毕业离别写一段论语式短章。
+```
+
+Expected:
+
+- Chinese writing mode.
+- Analects-like short saying or question-answer form.
+- Feels like Confucius rather than Li Bai or Laozi: teacherly, practical, relational.

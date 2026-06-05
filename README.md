@@ -10,7 +10,7 @@
 
 <p align="center">
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License: MIT"></a>
-  <a href="#roadmap"><img src="https://img.shields.io/badge/sages-Li%20Bai%20✅%20|%20Laozi%20✅-green" alt="Sages"></a>
+  <a href="#roadmap"><img src="https://img.shields.io/badge/sages-Li%20Bai%20✅%20|%20Laozi%20✅%20|%20Confucius%20✅-green" alt="Sages"></a>
 </p>
 
 ---
@@ -49,6 +49,16 @@ What went into Laozi:
 | Guardrails | "Non-action" is not laziness; softness is not weakness; Dao is not a personal god |
 | Dual-Mode Skill | 🗣️ Speaking (spare aphoristic counsel) + ✍️ Writing (Dao De Jing-style short chapters) |
 
+What went into Confucius:
+
+| Step | Detail |
+|---|---|
+| Text | *The Analects* in Chinese-English edition with Arthur Waley's English translation |
+| Biography | Qian Mu's *Biography of Confucius*, centered on learning and teaching |
+| Personality | Fivefold model: benevolence, ritual, learning, reciprocity, joy |
+| Guardrails | Confucius is human, not a lifeless icon; ritual must carry benevolence |
+| Dual-Mode Skill | 🗣️ Speaking (teacherly dialogue) + ✍️ Writing (Analects-style sayings and short essays) |
+
 ## Demo
 
 **Chinese · Speak**：
@@ -79,7 +89,7 @@ What went into Laozi:
 
 | | File | Audience | Style |
 |---|---|---|---|
-| 🏮 | `SKILL.md` | All users | Master router for Li Bai and Laozi |
+| 🏮 | `SKILL.md` | All users | Master router for Li Bai, Laozi, and Confucius |
 | 🌍 | `SKILL_EN.md` | Global English | Li Bai companion variant in poetic English |
 | 📖 | `SKILL_BILINGUAL.md` | Cross-cultural | Li Bai companion variant with English / Chinese body + bilingual context |
 
@@ -87,7 +97,7 @@ What went into Laozi:
 
 ## Quick Start
 
-Format: `::sage [lang] [notes] [mode]`. Omit anything you're not changing. `::lb` / `::libai` / `::Li Bai` / `::李白` all work for Li Bai. `::lz` / `::laozi` / `::Laozi` / `::老子` all work for Laozi.
+Format: `::sage [lang] [notes] [mode]`. Omit anything you're not changing. `::lb` / `::libai` / `::Li Bai` / `::李白` all work for Li Bai. `::lz` / `::laozi` / `::Laozi` / `::老子` all work for Laozi. `::kz` / `::confucius` / `::Confucius` / `::孔子` all work for Confucius.
 
 | Flag | Meaning |
 |---|---|
@@ -120,7 +130,7 @@ We pick sages with global name recognition and ideas that speak directly to mode
 |---|---|---|
 | Li Bai | Tang | ✅ The ultimate Romantic, face of Chinese poetry worldwide |
 | Laozi | Spring & Autumn | ✅ *Tao Te Ching*: 81 chapters of spare paradox, political restraint, and soft power |
-| Confucius | Spring & Autumn | 📋 The most famous Chinese person on earth. The *Analects* is literally a dialogue—made for AI |
+| Confucius | Spring & Autumn | ✅ The most famous Chinese sage; *The Analects* is literally a dialogue—made for AI |
 | Du Fu | Tang | 📋 Shakespeare + Virgil of China. Li Bai fell from heaven; Du Fu rose from the earth |
 | Su Shi | Song | 📋 Poet, painter, cook, engineer, and the wittiest drinking buddy you'll ever have |
 | Zhuangzi | Warring States | 📋 The butterfly-dreamer. Camus and Borges were fans |
