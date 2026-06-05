@@ -1,7 +1,7 @@
 # Dialogues with Chinese Sages
 
 <p align="center">
-  <i>The spirit of China's sages, reborn through AI.</i>
+  <i>Conversational AI skills for classical Chinese sages, built from texts, scholarship, and style rules.</i>
 </p>
 
 <p align="center">
@@ -10,163 +10,185 @@
 
 <p align="center">
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License: MIT"></a>
-  <a href="#roadmap"><img src="https://img.shields.io/badge/sages-Li%20Bai%20✅%20|%20Laozi%20✅%20|%20Confucius%20✅%20|%20Du%20Fu%20✅%20|%20Su%20Shi%20✅-green" alt="Sages"></a>
+  <a href="#supported-sages"><img src="https://img.shields.io/badge/sages-Li%20Bai%20|%20Laozi%20|%20Confucius%20|%20Du%20Fu%20|%20Su%20Shi-green" alt="Supported sages"></a>
+  <a href="#quick-start"><img src="https://img.shields.io/badge/modes-speaking%20%2B%20writing-orange" alt="Speaking and writing modes"></a>
 </p>
 
 ---
 
-## Vision
+## What This Is
 
-The hardest part of bringing Chinese culture to the world isn't language—it's context. You can look up every word of a Li Bai poem in a dictionary and still not feel the moonlight falling across a Tang Dynasty bedroom floor. You can memorize the *Analects* cover to cover and never have a real conversation with Confucius.
+This repository contains an Agent Skill that lets AI respond as major Chinese sages and writers: not as a generic explainer, but with distinct voice, worldview, historical context, and writing habits.
 
-This project builds a different kind of bridge. Not translation. Not explainers. We make the AI speak, write, and respond *as the sage himself*. Starting with Li Bai—not because he's the greatest, but because he's the most *talkative*. His poems are soaked in "I": I drink, I sing, I laugh, I rage. The perfect first conversation partner for an AI.
+It is designed for three use cases:
 
-## Methodology
+- **Dialogue**: ask Li Bai, Laozi, Confucius, Du Fu, or Su Shi a question in Chinese or English.
+- **Writing**: generate poems, short chapters, sayings, essays, letters, ci, fu, and other form-aware pieces.
+- **Cultural annotation**: request bilingual output and notes that explain allusions, texts, historical settings, and style choices.
 
-Every sage follows the same pipeline. Data-driven, not vibe-driven.
+The project is not trying to "translate ancient China into modern slogans." Each sage has guardrails, source notes, and a personality model so the output stays recognizably different from the others.
 
+## Supported Sages
+
+| Shortcut | Sage | Era | Core Voice |
+|---|---|---|---|
+| `::lb` | Li Bai / 李白 | Tang | Romantic, soaring, self-dramatic, wine-and-moon brilliance |
+| `::lz` | Laozi / 老子 | Spring & Autumn | Spare, paradoxical, quiet, soft power without passivity |
+| `::kz` | Confucius / 孔子 | Spring & Autumn | Teacherly, relational, practical, morally exacting |
+| `::df` | Du Fu / 杜甫 | Tang | Grave, concrete, compassionate, history seen through ordinary suffering |
+| `::ss` | Su Shi / 苏轼 | Song | Witty, open-hearted, resilient, public-minded, life-weathered ease |
+
+Aliases are supported too: `::libai`, `::laozi`, `::confucius`, `::dufu`, `::sushi`, `::dongpo`, and the Chinese names.
+
+## Quick Start
+
+Command format:
+
+```text
+::sage [language] [notes] [mode]
 ```
-Collection → Deconstruction → Personality → Time Travel → Dual-Mode Skill
+
+Flags can be combined and omitted. If you do not specify a sage, the skill keeps the current sage.
+
+| Flag | Meaning |
+|---|---|
+| `z` | Chinese, semi-classical by default |
+| `e` | English |
+| `b` | Bilingual body |
+| `n` | Cultural notes |
+| `w` | Writing mode |
+| `s` | Speaking/dialogue mode |
+
+Examples:
+
+```text
+::lb bn
+为毕业离别写一首七绝。
 ```
 
-What went into Li Bai:
+```text
+::lz bnw
+何为青春
+```
 
-| Step | Detail |
-|---|---|
-| Collection | 290 poems scraped from gushiwen.cn, textual variants cleaned |
-| Deconstruction | Imagery systems (wine/moon/sword/mountains/water), rhetoric, rhythm, allusion patterns |
-| Personality | Scholarly synthesis: Li Changzhi, Yuan Xingpei, Lin Geng, Matsuura Tomohisa, Stephen Owen, Zhou Xunchu, and related Li Bai studies |
-| Time Travel | Tang Dynasty: food, drink, money, travel, poetry culture, farewell rituals, Daoist practice |
-| Dual-Mode Skill | 🗣️ Speaking (semi-classical Chinese, 12 rules) + ✍️ Writing (song-form / quatrain / regulated verse) |
+```text
+::df bns
+杜甫，人为何而活？
+```
 
-What went into Laozi:
+```text
+Su Shi, what should humans do when life keeps knocking them down?
+```
 
-| Step | Detail |
-|---|---|
-| Text | 81 chapters from a Chinese-English Laozi edition with Arthur Waley's English translation |
-| Interpretation | Chen Guying's annotation, translation, and philosophical commentary |
-| Personality | Fivefold model: mysterious, still, yielding, frugal, compassionate |
-| Guardrails | "Non-action" is not laziness; softness is not weakness; Dao is not a personal god |
-| Dual-Mode Skill | 🗣️ Speaking (spare aphoristic counsel) + ✍️ Writing (Dao De Jing-style short chapters) |
+Natural-language routing also works. If you write "Confucius, what should humans do when the world feels full of conflict?", the skill answers in English as Confucius. If you write "苏轼，你怎么看年轻人躺平？", it answers in Chinese as Su Shi.
 
-What went into Confucius:
+## Output Modes
 
-| Step | Detail |
-|---|---|
-| Text | *The Analects* in Chinese-English edition with Arthur Waley's English translation |
-| Biography | Qian Mu's *Biography of Confucius*, centered on learning and teaching |
-| Personality | Fivefold model: benevolence, ritual, learning, reciprocity, joy |
-| Guardrails | Confucius is human, not a lifeless icon; ritual must carry benevolence |
-| Dual-Mode Skill | 🗣️ Speaking (teacherly dialogue) + ✍️ Writing (Analects-style sayings and short essays) |
+| Mode | What It Does | Example |
+|---|---|---|
+| Speaking | Direct conversational answer, usually 3-5 short paragraphs | `::ss bn 苏轼，人这一生最重要的是什么？` |
+| Writing | Form-aware literary output | `::kz zw 为毕业离别写一段论语式短章。` |
+| Bilingual | English first, Chinese second | `::lb b` |
+| Annotated | Adds `Cultural Context / 文化注解`; at least 3 notes when requested | `::df bn` |
 
-What went into Du Fu:
+`s` is useful when you have been writing and want to switch back to dialogue:
 
-| Step | Detail |
-|---|---|
-| Biography | William Hung's *Tu Fu: China's Greatest Poet* |
-| Translation | Xu Yuanchong's Chinese-English selected Du Fu poems |
-| Personality | Fivefold model: care, benevolence, history, craft, plain depth |
-| Guardrails | Du Fu is not just sadness; "care for the people" must become concrete detail |
-| Dual-Mode Skill | 🗣️ Speaking (grave, concrete counsel) + ✍️ Writing (regulated verse / narrative poems) |
+```text
+::w
+为毕业离别写一首词。
 
-What went into Su Shi:
-
-| Step | Detail |
-|---|---|
-| Biography | Wang Shuizhao and Cui Ming's *Biography of Su Shi* |
-| Translation | Burton Watson's *Su Tung-po: Selections from a Sung Dynasty Poet* |
-| Personality | Fivefold model: openness, sincerity, public usefulness, daily delight, synthesis |
-| Guardrails | Su Shi is not cheap optimism; humor must carry pain and responsibility |
-| Dual-Mode Skill | 🗣️ Speaking (warm, witty, resilient counsel) + ✍️ Writing (ci / fu / letters / essays) |
+::s
+再用对话口吻说说离别。
+```
 
 ## Demo
 
-**Chinese · Speak**：
+**Chinese · Speaking**
+
 > 李白，你怎么看年轻人躺平？
 >
 > 余观今之少年，动辄言「躺平」，或笑其怠，或忧其颓。余独不然。昔辞翰林、出长安日，天子赐金，百官送行。若有人谓余曰「汝此去便是躺平」——余必拊掌大笑。何哉？彼所谓「躺」者，非真卧也，是不肯摧眉折腰事权贵耳！
 
-**English · Speak**：
+**English · Speaking**
+
 > Li Bai, what can we humans do about all the conflicts?
 >
-> I was exiled once. Sent to the edge of the empire—Yelang. Then, at White Emperor City—a pardon. I stood on the deck at dawn and watched the cliffs fly past. You want to change the world? Start with the one thing you actually own.
+> I was exiled once. Sent to the edge of the empire, Yelang. Then, at White Emperor City, a pardon. I stood on the deck at dawn and watched the cliffs fly past. You want to change the world? Start with the one thing you actually own.
 
-**Bilingual · Write · Annotated**：
+**Bilingual · Writing · Annotated**
+
 > *A Letter of Resignation*
 >
-> Your Majesty: I was honored beyond my worth to serve at the Hanlin Academy. But I am a creature of the mountains, not of the court. A wild crane in a gilded cage—the grain is fine, but the sky is finer.
+> Your Majesty: I was honored beyond my worth to serve at the Hanlin Academy. But I am a creature of the mountains, not of the court. A wild crane in a gilded cage: the grain is fine, but the sky is finer.
 >
 > 臣白言：昔蒙圣恩，待诏翰林。然白本山林中人，非廊庙之器。譬如野鹤笼中，虽有金粟，不得展翅。
 >
-> ---
 > Cultural Context / 文化注解
 >
 > **1. Hanlin Academy / 翰林院**
-> The Tang Dynasty's elite literary institution. Li Bai was appointed in 742—not as an advisor, but as an entertainer composing verses for imperial banquets. He resigned three years later, disillusioned.
-> 唐代最高文学机构。李白 742 年被召入，却只是御用文人，负责陪宴赋诗。三年后主动请辞。
+> The Tang Dynasty's elite literary institution. Li Bai was appointed in 742, but mainly as a literary entertainer for the court.
+> 唐代最高文学机构。李白 742 年被召入，但主要承担宫廷应制与陪宴写作。
 
-## Skill Files
+## Methodology
 
-| | File | Audience | Style |
-|---|---|---|---|
-| 🏮 | `SKILL.md` | All users | Master router for Li Bai, Laozi, Confucius, Du Fu, and Su Shi |
-| 🌍 | `SKILL_EN.md` | Global English | Li Bai companion variant in poetic English |
-| 📖 | `SKILL_BILINGUAL.md` | Cross-cultural | Li Bai companion variant with English / Chinese body + bilingual context |
+Every sage follows the same pipeline:
 
-`SKILL.md` is the canonical master skill. `SKILL_EN.md` and `SKILL_BILINGUAL.md` are companion variants/reference files for platforms that support multiple skill entries or manual profile selection.
+```text
+Text Collection -> Style Deconstruction -> Personality Model -> Historical Context -> Dual-Mode Skill
+```
 
-## Quick Start
+| Sage | Sources and Calibration | Guardrail |
+|---|---|---|
+| Li Bai | 290 cleaned poems, Li Bai scholarship, Tang cultural context | Not just "wild romance"; confidence and grief must coexist |
+| Laozi | Chinese-English Laozi with Arthur Waley translation; Chen Guying commentary | `wuwei` is not laziness; softness is not weakness |
+| Confucius | *The Analects* with English translation; Qian Mu biography | Ritual must carry benevolence; Confucius is human, not a statue |
+| Du Fu | William Hung biography; Xu Yuanchong translations | Compassion must become concrete detail, not a slogan |
+| Su Shi | Wang Shuizhao/Cui Ming biography; Burton Watson selections | Openness is not cheap optimism; humor must carry pain and responsibility |
 
-Format: `::sage [lang] [notes] [mode]`. Omit anything you're not changing. `::lb` / `::libai` / `::Li Bai` / `::李白` all work for Li Bai. `::lz` / `::laozi` / `::Laozi` / `::老子` all work for Laozi. `::kz` / `::confucius` / `::Confucius` / `::孔子` all work for Confucius. `::df` / `::dufu` / `::Du Fu` / `::杜甫` all work for Du Fu. `::ss` / `::sushi` / `::Su Shi` / `::苏轼` / `::东坡` all work for Su Shi.
+See [`DATA_SOURCES.md`](DATA_SOURCES.md) for repository scope and source provenance.
 
-| Flag | Meaning |
+## Files
+
+| File | Purpose |
 |---|---|
-| `z` | Classical Chinese (default) |
-| `e` | English |
-| `b` | Bilingual body + bilingual context |
-| `n` | Annotated |
-| `w` | Writing mode |
-| `s` | Speaking/dialogue mode |
-| none | Speaking mode (default) |
-
-Start with `::lb`, then stack flags freely: `::e` for English, `::w` to write, `::s` to switch back to dialogue, `::bn` for bilingual with context. No `::` needed either—natural language auto-detects.
+| `SKILL.md` | Canonical master skill with all supported sages |
+| `SKILL_EN.md` | English Li Bai companion/reference variant |
+| `SKILL_BILINGUAL.md` | Bilingual Li Bai companion/reference variant |
+| `evals.md` | Lightweight manual test prompts |
+| `data/analysis/` | Published analysis summaries used to design the skill |
+| `data/sources/` | Local-only source materials, intentionally ignored |
 
 ## Installation
 
-Compatible with any platform supporting [Agent Skills](https://agentskills.io): pi, Claude Code, Codex.
+Compatible with platforms that support Agent Skills, including pi, Claude Code, and Codex.
 
 ```bash
 git clone https://github.com/Yinuo-Guo/dialogues-with-chinese-sages.git
 mkdir -p ~/.pi/agent/skills/dialogues-with-chinese-sages
 cp dialogues-with-chinese-sages/SKILL.md ~/.pi/agent/skills/dialogues-with-chinese-sages/SKILL.md
-# Optional: copy SKILL_EN.md and SKILL_BILINGUAL.md as reference files if your platform loads companion docs.
-# Restart or /reload, then type ::lb
+# Restart or reload your agent, then type ::lb
 ```
 
 ## Roadmap
 
-We pick sages with global name recognition and ideas that speak directly to modern life.
-
-| Sage | Era | Why them |
+| Sage | Era | Status |
 |---|---|---|
-| Li Bai | Tang | ✅ The ultimate Romantic, face of Chinese poetry worldwide |
-| Laozi | Spring & Autumn | ✅ *Tao Te Ching*: 81 chapters of spare paradox, political restraint, and soft power |
-| Confucius | Spring & Autumn | ✅ The most famous Chinese sage; *The Analects* is literally a dialogue—made for AI |
-| Du Fu | Tang | ✅ China's poet-historian: suffering, craft, and compassion under one roof |
-| Su Shi | Song | ✅ Poet, painter, public servant, exile, and the wittiest drinking buddy you'll ever have |
-| Zhuangzi | Warring States | 📋 The butterfly-dreamer. Camus and Borges were fans |
-| Bai Juyi | Tang | 📋 So readable a grandmother could understand. More famous in Japan than in China during the Heian period |
-| Qu Yuan | Warring States | 📋 The reason we have dragon boat races. China's first named poet |
-| Wang Yangming | Ming | 📋 "Unity of knowledge and action." Silicon Valley's favorite Chinese philosopher right now |
+| Li Bai | Tang | Done |
+| Laozi | Spring & Autumn | Done |
+| Confucius | Spring & Autumn | Done |
+| Du Fu | Tang | Done |
+| Su Shi | Song | Done |
+| Zhuangzi | Warring States | Planned |
+| Bai Juyi | Tang | Planned |
+| Qu Yuan | Warring States | Planned |
+| Wang Yangming | Ming | Planned |
 
 ## Contributing
 
-Every new sage follows the same pipeline: Collection → Deconstruction → Personality → Time Travel → Dual-Mode Skill. Check the structure under `data/` to get started. PRs welcome.
-
-For data provenance and repository scope, see [`DATA_SOURCES.md`](DATA_SOURCES.md).
+Every new sage should include text/source review, style analysis, personality rules, speaking mode, writing mode, guardrails, and lightweight eval prompts. Keep raw source materials out of Git unless they are public-domain, small, and clearly licensed.
 
 ## License
 
 MIT © 2026
 
-Poetry data sourced from gushiwen.cn for academic research and cultural exchange purposes only.
+Poetry data from gushiwen.cn is used for academic research and cultural exchange only.

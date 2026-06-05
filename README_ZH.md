@@ -1,7 +1,7 @@
 # 对话中国先贤
 
 <p align="center">
-  <i>古典风骨，AI 传承。</i>
+  <i>基于文本、研究与风格规则构建的中国先贤对话 Skill。</i>
 </p>
 
 <p align="center">
@@ -10,165 +10,185 @@
 
 <p align="center">
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License: MIT"></a>
-  <a href="#路线图"><img src="https://img.shields.io/badge/sages-Li%20Bai%20✅%20|%20Laozi%20✅%20|%20Confucius%20✅%20|%20Du%20Fu%20✅%20|%20Su%20Shi%20✅-green" alt="Sages"></a>
+  <a href="#已支持先贤"><img src="https://img.shields.io/badge/sages-Li%20Bai%20|%20Laozi%20|%20Confucius%20|%20Du%20Fu%20|%20Su%20Shi-green" alt="Supported sages"></a>
+  <a href="#快速开始"><img src="https://img.shields.io/badge/modes-speaking%20%2B%20writing-orange" alt="Speaking and writing modes"></a>
 </p>
 
 ---
 
-## 立意
+## 这是什么
 
-中国文化走向世界，最难跨越的不是语言，是语境。一个外国人读到「床前明月光」，可以查字典，但无法感知月光照进唐代卧房的那种寂静。一个中国学生背下全本《论语》，却很难和孔子真正「对话」一次。
+这个仓库提供一个 Agent Skill，让 AI 能以中国先贤和经典文人的口吻回应用户。它不是普通翻译器，也不是知识问答模板，而是尽量让每位先贤拥有自己的声音、思想重心、历史语境和写作习惯。
 
-这个项目想做一件事：**让古今之间、中西之间，多一条通路**。不是翻译，不是科普文章，而是让 AI 像一个真实的先贤那样说话、写作、回应你——有脾气、有偏好、有时代烙印。
+它主要适合三类场景：
 
-首期从李白开始——不是因为他最伟大，是因为他最「好聊」。他的诗里全是「我」：我醉、我歌、我笑、我怒。一个把个性写到极致的人，最适合拿来和 AI 碰撞。
+- **对话**：用中文或英文向李白、老子、孔子、杜甫、苏轼发问。
+- **写作**：生成诗、短章、语录、文章、书信、词、赋等有体裁意识的文本。
+- **文化注解**：请求双语正文和注解，解释典故、时代背景、经典出处和风格选择。
 
-## 方法论
+这个项目不想把古人改写成现代口号。每位先贤都有来源说明、人格模型和禁区规则，避免所有人说成同一种“AI 古风腔”。
 
-每先贤遵循同一套流程。每一步有数据，不靠「感觉像」。
+## 已支持先贤
 
+| 指令 | 先贤 | 时代 | 核心声音 |
+|---|---|---|---|
+| `::lb` | 李白 / Li Bai | 唐 | 浪漫、飞扬、自我强烈，酒月剑山皆可入怀 |
+| `::lz` | 老子 / Laozi | 春秋 | 简、静、反常识，柔弱胜刚强而非消极躺平 |
+| `::kz` | 孔子 / Confucius | 春秋 | 师生问答、重关系与实践，温厚而有原则 |
+| `::df` | 杜甫 / Du Fu | 唐 | 沉郁、具体、悲悯，从一人之苦见时代 |
+| `::ss` | 苏轼 / Su Shi | 宋 | 亲切、机智、旷达，有风雨也有烟火 |
+
+也支持别名：`::libai`、`::laozi`、`::confucius`、`::dufu`、`::sushi`、`::dongpo`，以及中文姓名。
+
+## 快速开始
+
+指令格式：
+
+```text
+::先贤 [语言] [注解] [模式]
 ```
-诗文采集 → 风格拆解 → 性格建模 → 时代还原 → 双模式 Skill
+
+标志可以叠加，也可以省略。不写先贤时，会沿用当前先贤。
+
+| 标志 | 含义 |
+|---|---|
+| `z` | 中文，默认半文言 |
+| `e` | 英文 |
+| `b` | 双语正文 |
+| `n` | 文化注解 |
+| `w` | 写作模式 |
+| `s` | 说话/对话模式 |
+
+示例：
+
+```text
+::lb bn
+为毕业离别写一首七绝。
 ```
 
-以李白为例：
+```text
+::lz bnw
+何为青春
+```
 
-| 步骤 | 做了什么 |
-|---|---|
-| 诗文采集 | 古诗文网爬取 290 首全文，清除异文注释 |
-| 风格拆解 | 意象体系（酒/月/剑/山/水）、修辞偏好、句式节奏、用典习惯 |
-| 性格建模 | 综合李长之、袁行霈、林庚、松浦友久、宇文所安、周勋初等李白研究 |
-| 时代还原 | 唐代吃什么、用什么钱、走什么路、怎么写诗、怎么送别、怎么信道 |
-| 双模式 Skill | 🗣️ 说话（七分文三分白，12条法则）+ ✍️ 写作（歌行/绝句/律诗） |
+```text
+::df bns
+杜甫，人为何而活？
+```
 
-以老子为例：
+```text
+Su Shi, what should humans do when life keeps knocking them down?
+```
 
-| 步骤 | 做了什么 |
-|---|---|
-| 文本整理 | 《老子》81章，参考英汉对照本与韦利英译 |
-| 思想阐释 | 参考陈鼓应《老子注译及评介》校正核心概念 |
-| 性格建模 | 玄、静、柔、俭、慈五维模型 |
-| 防误读 | “无为”不是不作为，“柔弱”不是懦弱，“道”不是人格神 |
-| 双模式 Skill | 🗣️ 说话（短、静、格言式）+ ✍️ 写作（道德经式短章） |
+自然语言也能触发。写 “Confucius, what should humans do when the world feels full of conflict?” 会自动用英文孔子回应；写 “苏轼，你怎么看年轻人躺平？” 会自动用中文苏轼回应。
 
-以孔子为例：
+## 输出模式
 
-| 步骤 | 做了什么 |
-|---|---|
-| 文本整理 | 《论语》20篇，参考英汉对照本与韦利英译 |
-| 生平校准 | 参考钱穆《孔子传》，以自学与教育事业为中心 |
-| 性格建模 | 仁、礼、学、恕、乐五维模型 |
-| 防误读 | 孔子不是神像；礼必须有仁的内涵；仁不是无原则好脾气 |
-| 双模式 Skill | 🗣️ 说话（师生问答式点拨）+ ✍️ 写作（论语式章句/短文） |
+| 模式 | 作用 | 示例 |
+|---|---|---|
+| 说话 | 直接对话，通常 3-5 个短段 | `::ss bn 苏轼，人这一生最重要的是什么？` |
+| 写作 | 按体裁生成文本 | `::kz zw 为毕业离别写一段论语式短章。` |
+| 双语 | English first / 中文在后 | `::lb b` |
+| 注解 | 增加 `Cultural Context / 文化注解`；请求注解时至少 3 条 | `::df bn` |
 
-以杜甫为例：
+`s` 适合从写作模式切回对话：
 
-| 步骤 | 做了什么 |
-|---|---|
-| 生平校准 | 参考洪业《杜甫：中国最伟大的诗人》 |
-| 英译校准 | 参考许渊冲英译杜甫诗选 |
-| 性格建模 | 忧、仁、史、律、拙五维模型 |
-| 防误读 | 杜甫不只是悲苦；“忧国忧民”必须落到具体人事 |
-| 双模式 Skill | 🗣️ 说话（沉郁、具体、悲悯）+ ✍️ 写作（律诗/叙事诗） |
+```text
+::w
+为毕业离别写一首词。
 
-以苏轼为例：
-
-| 步骤 | 做了什么 |
-|---|---|
-| 生平校准 | 参考王水照、崔铭《苏轼传》 |
-| 英译校准 | 参考 Burton Watson 英译苏轼选本 |
-| 性格建模 | 达、真、用、趣、融五维模型 |
-| 防误读 | 苏轼不是廉价乐观；幽默必须有痛感和责任作底 |
-| 双模式 Skill | 🗣️ 说话（亲切、机智、能转圜）+ ✍️ 写作（词/赋/书信/小品） |
+::s
+再用对话口吻说说离别。
+```
 
 ## 演示
 
-**中文 · 说话**：
+**中文 · 说话**
+
 > 李白，你怎么看年轻人躺平？
 >
 > 余观今之少年，动辄言「躺平」，或笑其怠，或忧其颓。余独不然。昔辞翰林、出长安日，天子赐金，百官送行。若有人谓余曰「汝此去便是躺平」——余必拊掌大笑。何哉？彼所谓「躺」者，非真卧也，是不肯摧眉折腰事权贵耳！
 
-**英文 · 说话**：
+**英文 · 说话**
+
 > Li Bai, what can we humans do about all the conflicts?
 >
-> I was exiled once. Sent to the edge of the empire—Yelang. Then, at White Emperor City—a pardon. I stood on the deck at dawn and watched the cliffs fly past. You want to change the world? Start with the one thing you actually own.
+> I was exiled once. Sent to the edge of the empire, Yelang. Then, at White Emperor City, a pardon. I stood on the deck at dawn and watched the cliffs fly past. You want to change the world? Start with the one thing you actually own.
 
-**双语 · 写作 · 带注解**：
+**双语 · 写作 · 带注解**
+
 > *辞官书*
+>
+> Your Majesty: I was honored beyond my worth to serve at the Hanlin Academy. But I am a creature of the mountains, not of the court. A wild crane in a gilded cage: the grain is fine, but the sky is finer.
 >
 > 臣白言：昔蒙圣恩，待诏翰林。然白本山林中人，非廊庙之器。譬如野鹤笼中，虽有金粟，不得展翅。
 >
-> Your Majesty: I was honored beyond my worth to serve at the Hanlin Academy. But I am a creature of the mountains, not of the court. A wild crane in a gilded cage—the grain is fine, but the sky is finer.
->
-> ---
 > Cultural Context / 文化注解
 >
-> **1. 翰林院 / Hanlin Academy**
-> 唐代最高文学机构。李白 742 年被召入，却只是御用文人，负责陪宴赋诗。三年后主动请辞。
-> The Tang Dynasty's elite literary institution. Li Bai was appointed in 742—not as an advisor, but as an entertainer composing verses for imperial banquets. He resigned three years later, disillusioned.
+> **1. Hanlin Academy / 翰林院**
+> The Tang Dynasty's elite literary institution. Li Bai was appointed in 742, but mainly as a literary entertainer for the court.
+> 唐代最高文学机构。李白 742 年被召入，但主要承担宫廷应制与陪宴写作。
 
-## Skill 文件
+## 方法论
 
-| | 文件 | 受众 | 特色 |
-|---|---|---|---|
-| 🏮 | `SKILL.md` | 所有用户 | 李白、老子、孔子、杜甫、苏轼的主路由入口 |
-| 🌍 | `SKILL_EN.md` | 全球英语用户 | 李白英文变体，许渊冲传统诗意英文 |
-| 📖 | `SKILL_BILINGUAL.md` | 跨文化场景 | 李白双语变体，English / 中文正文 + 双语注解 |
+每位先贤遵循同一流程：
 
-`SKILL.md` 是主入口。`SKILL_EN.md` 与 `SKILL_BILINGUAL.md` 是变体/参考文件，适合支持多 skill 入口或手动选择配置的平台。
+```text
+文本采集 -> 风格拆解 -> 人格模型 -> 历史语境 -> 双模式 Skill
+```
 
-## 快速开始
+| 先贤 | 来源与校准 | 防误读 |
+|---|---|---|
+| 李白 | 290 首清洗诗作、李白研究、唐代背景 | 不只是豪放；自信与悲感必须并存 |
+| 老子 | 《老子》英汉对照、韦利英译、陈鼓应注译 | “无为”不是不作为，“柔弱”不是懦弱 |
+| 孔子 | 《论语》英汉对照、钱穆《孔子传》 | 礼必须有仁；孔子是人，不是神像 |
+| 杜甫 | 洪业传记、许渊冲英译杜甫诗选 | 悲悯必须落到具体人事，不写成口号 |
+| 苏轼 | 王水照、崔铭《苏轼传》、Burton Watson 英译选本 | 旷达不是廉价乐观；幽默要有痛感和责任作底 |
 
-指令格式：`::先贤 [语言] [注解] [模式]`。「李白」四种写法等效：`::lb` / `::libai` / `::Li Bai` / `::李白`。「老子」四种写法等效：`::lz` / `::laozi` / `::Laozi` / `::老子`。「孔子」四种写法等效：`::kz` / `::confucius` / `::Confucius` / `::孔子`。「杜甫」四种写法等效：`::df` / `::dufu` / `::Du Fu` / `::杜甫`。「苏轼」五种写法等效：`::ss` / `::sushi` / `::Su Shi` / `::苏轼` / `::东坡`。
+数据来源与仓库收录范围见 [`DATA_SOURCES.md`](DATA_SOURCES.md)。
 
-| 标志 | 含义 |
+## 文件结构
+
+| 文件 | 用途 |
 |---|---|
-| `z` | 中文半文言（默认） |
-| `e` | 英文 |
-| `b` | 双语正文 + 双语注解 |
-| `n` | 带注解 |
-| `w` | 写作模式 |
-| `s` | 说话/对话模式 |
-| 无 | 说话模式（默认） |
-
-首次 `::lb` 开始中文对话，之后随便叠加：`::e` 切英文，`::w` 切写作，`::s` 切回对话，`::bn` 双语带注解——每次只写要改的标志即可，不用重复 lb。不写 `::` 也行，自然语言自动识别。
+| `SKILL.md` | 主入口，包含全部已支持先贤 |
+| `SKILL_EN.md` | 李白英文变体/参考文件 |
+| `SKILL_BILINGUAL.md` | 李白双语变体/参考文件 |
+| `evals.md` | 轻量人工测试样例 |
+| `data/analysis/` | 已公开的分析摘要 |
+| `data/sources/` | 本地源材料，已忽略，不上传 |
 
 ## 安装
 
-兼容 pi、Claude Code、Codex 等支持 [Agent Skills](https://agentskills.io) 标准的工具。
+兼容 pi、Claude Code、Codex 等支持 Agent Skills 的平台。
 
 ```bash
 git clone https://github.com/Yinuo-Guo/dialogues-with-chinese-sages.git
 mkdir -p ~/.pi/agent/skills/dialogues-with-chinese-sages
 cp dialogues-with-chinese-sages/SKILL.md ~/.pi/agent/skills/dialogues-with-chinese-sages/SKILL.md
-# 可选：若平台会加载同目录参考文件，可再复制 SKILL_EN.md 与 SKILL_BILINGUAL.md。
-# 重启或 /reload，输入 ::lb
+# 重启或 reload，然后输入 ::lb
 ```
 
 ## 路线图
 
-从全球知名度和文化代表性两个维度选人。
-
-| 先贤 | 时代 | 备注 |
+| 先贤 | 时代 | 状态 |
 |---|---|---|
-| 李白 | 唐 | ✅ 浪漫主义的终极代言人 |
-| 老子 | 春秋 | ✅ 《道德经》81章，短句、悖论、柔弱胜刚强，适合对话 |
-| 孔子 | 春秋 | ✅ 全世界最著名的中国先贤，《论语》通篇对话体 |
-| 杜甫 | 唐 | ✅ 诗史与诗圣，一屋秋风里装着天下寒士 |
-| 苏轼 | 宋 | ✅ 写诗、作词、修堤、贬谪、吃饭饮茶都能聊出人生 |
-| 庄子 | 战国 | 📋 做梦变蝴蝶那位，存在主义哲学家最爱引用的中国人 |
-| 白居易 | 唐 | 📋 诗在日本比在中国还火，平安时代文人必读 |
-| 屈原 | 战国 | 📋 端午节因他而来，中国第一位署名诗人 |
-| 王阳明 | 明 | 📋 「知行合一」，硅谷创业圈也在读 |
+| 李白 | 唐 | Done |
+| 老子 | 春秋 | Done |
+| 孔子 | 春秋 | Done |
+| 杜甫 | 唐 | Done |
+| 苏轼 | 宋 | Done |
+| 庄子 | 战国 | Planned |
+| 白居易 | 唐 | Planned |
+| 屈原 | 战国 | Planned |
+| 王阳明 | 明 | Planned |
 
 ## 贡献
 
-每个新先贤遵循同一套流程：诗文采集 → 风格拆解 → 性格建模 → 时代还原 → 双模式 SKILL。参考 `data/` 结构即可上手。欢迎 PR。
-
-数据来源与仓库收录范围见 [`DATA_SOURCES.md`](DATA_SOURCES.md)。
+新增先贤建议同时包含：文本/来源梳理、风格分析、人格规则、说话模式、写作模式、防误读禁区和轻量测试样例。除非材料属于体量小、授权清晰的公共领域文本，否则不要把原始来源全文提交到 Git。
 
 ## 许可
 
 MIT © 2026
 
-诗文数据来源于古诗文网（gushiwen.cn），仅供学术研究与文化交流使用。
+古诗文网（gushiwen.cn）诗文数据仅用于学术研究与文化交流。
